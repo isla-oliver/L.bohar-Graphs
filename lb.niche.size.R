@@ -3,11 +3,7 @@ library(mvtnorm)
 install.packages("mvtnorm")
 library(siar)
 install.packages("siar")
-setwd("C:/Users/cspeed/OneDrive - Australian Institute of Marine Science/Quadrant/Appropriation project eDNA Isotopes/Isotope analysis/Data/R-Data")
 lb <- read.csv("Boharadj.csv",stringsAsFactors = FALSE)
-# subset to remove muscle tissue samples
-iso_fin <- subset(iso_data,sample_type == "fin clip")
-iso_fin$Trip = factor(iso_fin$Trip, levels=c('1','2'), labels=c("Trip 1", "Trip 2"))
 lb$Location <- as.factor(lb$Location)
 
 
